@@ -17,68 +17,97 @@
     <div class="container">
         <div class="card">
             <div class="card-header text-left">
-              <h3 class="text-left">Payment form example</h3>
+                <h3 class="text-left">Payment form example</h3>
             </div>
             <div class="alert alert-danger m-3" role="alert">
                 <strong>Algunos campos estan vacios</strong>
             </div>
             <div class="card-body">
-                <div class="row">
-                    
+                <div class="row mb-3">
+                    <div class="col-12 col-md-6">
+                        <label for="cardNumber" class="form-label">Numero de Tarjeta #</label>
+                        <input type="text" class="form-control" id="cardNumber" placeholder="XXXXXXXXXXXXXXXX">
+                    </div>
+                    <div class="col-12 col-md-3 ">
+                        <label for="cvc" class="form-label">CVC #</label>
+                        <input type="text" class="form-control" id="cvc" placeholder="0000">
+                    </div>
+                    <div class="col-12 col-md-3 ">
+                        <label for="amount" class="form-label">Amount</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><strong>$</strong></span>
+                            <input type="text" class="form-control" id="amount" placeholder="Amount">
+                        </div>
+                    </div>
                 </div>
-                <div class="row">
 
+                <div class="row mb-3">
+                    <div class="col-12 col-md-6 ">
+                        <label for="name" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="name">
+                    </div>
+                    <div class="col-12 col-md-6 ">
+                        <label for="lastName" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="lastName">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12 col-md-6">
+                        <label for="city" class="form-label">City</label>
+                        <input type="text" class="form-control" id="city">
+                    </div>
+                    <div class="col-12 col-md-3 ">
+                        <label for="state" class="form-label">State</label>
+                        <select class="form-select" id="state" aria-label="Default select example">
+                            <option selected>Pick a state</option>
+                            <option value="1">New York</option>
+                            <option value="2">Nevada</option>
+                            <option value="3">California</option>
+                        </select>
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <label for="postalCode" class="form-label">Postal Code</label>
+                        <input type="text" class="form-control" id="postalCode">
+                    </div>
                 </div>
                 <div class="row">
+                    <div class="col-md-6 pb-3">
+                        <p for="exampleAccount">We accept:</p>
+                        <div class="btn-group" data-toggle="buttons">
+                            <label class="btn btn-secondary">
+                                <input autocomplete="off" checked id="blue" name="options" type="radio">
+                                <i class="fab fa-cc-mastercard"></i>
+                            </label>
+                            <label class="btn btn-secondary">
+                                <input autocomplete="off" id="red" name="options" type="radio">
+                                <i class="fab fa-cc-visa"></i>
+                            </label>
+                            <label class="btn btn-secondary">
+                                <input autocomplete="off" id="green" name="options" type="radio">
+                                <i class="fab fa-cc-diners-club"></i>
+                            </label>
+                            <label class="btn btn-secondary">
+                                <input autocomplete="off" id="yellow" name="options" type="radio">
+                                <i class="fab fa-cc-amex"></i>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-6 pb-3">
+                        <label for="exampleMessage">Message</label>
+                        <textarea class="form-control" id="complexExampleMessage" rows="3"></textarea>
+                        <small class="text-muted">Add any notes here.</small>
 
+                    </div>
                 </div>
-                <div class="row">
-
-                </div>
-                <div class="row">
-
-                </div>
-                <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon1">@</span>
-                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-                  </div>
-                  
-                  <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                    <span class="input-group-text" id="basic-addon2">@example.com</span>
-                  </div>
-                  
-                  <label for="basic-url" class="form-label">Your vanity URL</label>
-                  <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
-                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-                  </div>
-                  
-                  <div class="input-group mb-3">
-                    <span class="input-group-text">$</span>
-                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-                    <span class="input-group-text">.00</span>
-                  </div>
-                  
-                  <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Username" aria-label="Username">
-                    <span class="input-group-text">@</span>
-                    <input type="text" class="form-control" placeholder="Server" aria-label="Server">
-                  </div>
-                  
-                  <div class="input-group">
-                    <span class="input-group-text">With textarea</span>
-                    <textarea class="form-control" aria-label="With textarea"></textarea>
-                  </div>              
             </div>
-            <div class="card-footer d-flex justify-content-end ">
-                <a href="#" class="btn btn-secondary mx-2">Cancel</a>
-                <a href="#" class="btn btn-primary">Send</a>
-            </div>
-          </div>
+            </form>
+        </div>
+
+        <div class="card-footer d-flex justify-content-end ">
+            <a href="#" class="btn btn-secondary mx-2">Cancel</a>
+            <a href="#" class="btn btn-primary">Send</a>
+        </div>
     </div>
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
